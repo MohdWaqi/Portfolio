@@ -1,0 +1,30 @@
+.navbar {
+    height: 18vh;
+    position:fixed;
+    display: flex;
+    align-items: center;
+    width:100vw;
+    z-index:1;
+}
+.navbar > img {
+    height:80%;
+    margin:0 15% 0 5%;
+
+}
+.navbar > div{
+    background-color: rgba(127, 128, 128,0.2);
+    width:700px;
+    height: 10vh;
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius:20px; 
+}
+.links{
+    border-radius:20px;
+    color:white;
+    padding:18px 40px;    
+}
+.links:hover{
+    background-color:#5276A2
+}
