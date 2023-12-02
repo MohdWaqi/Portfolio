@@ -2,6 +2,8 @@ import './App.css'
 import NavBar from './components/NavBar'
 import myImage from "./assets/landing1.jpg"
 import chakra from "./assets/chakra.png"
+import ProjectCard from './components/ProjectCard'
+
 
 function App() {
 
@@ -46,14 +48,11 @@ function App() {
       </div>
 
     </div>
-    <div name='projects' className='sections' style={{height:"100vh"}}>
+    <div name='projects' className='sections'>
       <h1>Projects</h1>
       <hr/>
-      <div>
-        <img src='https://postlmg.cc/rDjD4GdM'/>
-        <div></div>
-      </div>
-
+      <ProjectCard images={['https://i.postimg.cc/k53Kkfq6/Vite-React-Google-Chrome-21-11-2023-07-56-24.png','https://i.postimg.cc/gjWYpLrK/Vite-React-Google-Chrome-21-11-2023-07-57-33.png','https://i.postimg.cc/J4sT8YVP/Vite-React-Google-Chrome-21-11-2023-07-58-31.png','https://i.postimg.cc/wBwJ7HDJ/Vite-React-Google-Chrome-21-11-2023-07-58-48.png']} features={["Ability to Sort displayed Products.", "Ability to login the user with proper logged in successful alert.","User Friendly.","Fullscreen Mode."]} tech={["React js","Chakra UI","Javascript Utilities & Libraries"]} description="This is the clone UI of India's largest e-commerce store." projectOn="Myntra Clone" deploy='https://waqi-myntra.netlify.app/'/>
+      <ProjectCard images={['https://i.postimg.cc/d0ycMnHp/Document-Google-Chrome-02-12-2023-16-15-41.png','https://i.postimg.cc/6q0f8J3S/Document-Google-Chrome-02-12-2023-16-17-11.png','https://i.postimg.cc/brB4FBcZ/Document-Google-Chrome-02-12-2023-16-18-24.png']} features={["Different UI in different devices", "Responsive","User Friendly.","Fullscreen Mode."]} tech={["HTML","CSS","Vanilla Javascript"]} description="This is the responsive of superhero resume of Batman." projectOn="Superhero Resume" deploy='https://coruscating-semifreddo-d5aa34.netlify.app/'/>
     </div>
     <div name='contact' className='sections' style={{height:"100vh"}}>
       <h1>Hello</h1>

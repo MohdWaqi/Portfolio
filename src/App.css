@@ -89,3 +89,37 @@ button:hover{
 .skills img:hover{
   transform:scale(1.5)
 }
+.projects{
+  width:min-content;
+  margin:auto;
+  margin-top:5%;
+  background-color: rgba(127, 128, 128,0.2);
+  padding:2%;
+  display:flex;
+  gap:40px;
+  border-radius:20px;
+}
+.projects img{
+  width:600px;
+  object-fit:scale-down;
+  height:300px;
+  border-radius:20px;
+}
+#details{
+  width:270px
+}
+#details h3, h4, p, ul, li{
+  text-align: left;
+  line-height:23px;
+  font-size:0.8rem
+}
+#details p{
+  margin-top:20px
+}
+#details hr{
+  width:70%;
+  margin:auto
+}
+
+
+
