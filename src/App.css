@@ -5,7 +5,8 @@
   color:white
 }
 .app{
-  background-color: #062040
+  background-color: #062040;
+  overflow-x: hidden;
 }
 .landingPage{
   background: url("./assets/landing.jpg");
@@ -32,7 +33,7 @@
   font-size:2.5rem;
   font-weight:600;
 }
-button{
+.btn{
   padding:2.5% 5%;
   font-size:1.2rem;
   border-radius:20px;
@@ -44,7 +45,7 @@ button{
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   transition: 0.5s
 }
-button:hover{
+.btn:hover{
   transform:translate(0, -10px)
 }
 .sections > h1 {
@@ -86,7 +87,7 @@ button:hover{
   grid-gap:70px;
   
 }
-.skills img:hover{
+.skills img:hover, .contact img:hover{
   transform:scale(1.5)
 }
 .projects{
@@ -127,7 +128,103 @@ margin-top:10%
 }
 .contact img{
   width:4.5%;
-  margin:5%
+  margin:5%;
+  transition:1.5s
+}
+@media (max-width: 1080px){
+  .landingPage > div{
+    left:15%;
+    top:35%
+  }
+  .landingPage h1{
+    font-size:3.8rem
+  }
+  .landingPage h2{
+    font-size:1.9rem;
+  }
+  .btn{
+    font-size:1rem
+  }
+  .sections h1{
+    font-size:1.5rem
+  }
+  .about h3{
+    font-size:1rem;
+  }
+  .about{
+    flex-direction:column;
+    background:url("./assets/landing1.jpg");
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position:center center;
+    background-color: rgba(0,0,0, 0.7);
+    background-blend-mode: darken; 
+    padding:5%;
+    border-radius:10px;
+  }
+  .skills{
+    grid-template-columns:repeat(3,1fr)
+  }
+  .skills img{
+    width:110px
+  }
+  .projects{
+    flex-direction:column;
+    justify-content:center;
+    padding:5%
+  }
+  #details {
+    margin:auto;
+    margin-top:-40px;
+  }
+  #details img{
+    width:15%;
+    height:max-content;
+    margin: 0 2%;
+    float:left;
+  }
 }
 
-
+@media (max-width: 767px){
+  .landingPage{
+    background: url("./assets/landing3.jpg");
+    background-size: cover;
+  background-color: rgba(0,0,0, 0.7);
+  background-blend-mode: darken; 
+  }
+  .landingPage h1{
+    font-size:2.3rem;
+    line-height: 80px
+   }
+  .landingPage h2{
+      font-size:1.5rem
+    }
+  .sections h1{
+    padding:15% 0 3%
+  }
+  .btn{
+    margin-top:15%
+  }
+  .sections hr{
+    width:40%
+  }
+  .about h3{
+    font-size:0.9rem;
+    line-height:35px
+  }
+  
+  .skills{
+    margin-top:50px;
+    grid-gap:50px;
+    width:70%
+  }
+  .skills img{
+    width:99%
+  }
+  .projects{
+    margin:50px auto
+  }
+  .contact img{
+    width:7%;
+  }
+}

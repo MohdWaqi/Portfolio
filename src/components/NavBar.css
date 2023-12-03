@@ -11,7 +11,7 @@
     margin:0 15% 0 5%;
 
 }
-.navbar > div{
+.navChild{
     background-color: rgba(127, 128, 128,0.2);
     width:700px;
     height: 10vh;
@@ -27,4 +27,28 @@
 }
 .links:hover{
     background-color:#5276A2
+}
+.bg{
+    background-color:#5276A2
+}
+
+@media (max-width: 1080px){
+    
+.navbar {
+    height:12vh
+}
+.navChild{
+    width:450px;
+    height:8vh
+}
+.links{
+    font-size:0.8rem;
+    padding:10px 20px 
+}
+}
+@media (max-width: 767px){
+    .navbar >img{
+        height:100%
+    }
+    .
 }

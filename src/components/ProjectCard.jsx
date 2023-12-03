@@ -1,28 +1,43 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel'
+import { ScreenContext } from '../context/ScreenContextProvider';
 
-const ProjectCard = ({projectOn, description, images, features, tech, deploy}) => {
+const ProjectCard = ({projectOn, techIco, description, images, features, tech, deploy}) => {
+  const {isTablet, isMobile} = useContext(ScreenContext)
   return (
       <div className='projects'>
-    <a href={deploy}>
-    <Carousel autoPlay width={600} showArrows={false} showThumbs={false} showStatus={false} infiniteLoop>
+    {isMobile?<><a href={deploy} data-aos="fade-up" >
+    <Carousel autoPlay width={300} showArrows={false} showThumbs={false} showStatus={false} infiniteLoop>
         {images.map((image)=><img src={image}/>)}
     </Carousel>
     </a>
       <div id="details">
-        <h2>{projectOn}</h2>
-        <hr/>
-        <p>{description}</p>
-        <h4>Features</h4> 
+        <h2 data-aos="fade-up">{projectOn}</h2>
+        <hr data-aos="fade-up"/>
+        <p data-aos="fade-up">{description}</p>
+        <h4>Tech Stack Used</h4> 
+        {isTablet?techIco.map((icon)=><img src={icon} data-aos="fade-up"/>):<ul>
+          {tech.map((technology) =><li data-aos="fade-up">{technology}</li>)}
+        </ul>}
+      </div></>:<><a href={deploy} data-aos="fade-up" >
+    <Carousel autoPlay width={isTablet?400:600} showArrows={false} showThumbs={false} showStatus={false} infiniteLoop>
+        {images.map((image)=><img src={image}/>)}
+    </Carousel>
+    </a>
+      <div id="details">
+        <h2 data-aos="fade-up">{projectOn}</h2>
+        <hr data-aos="fade-up"/>
+        <p data-aos="fade-up">{description}</p>
+        <h4 data-aos="fade-up">Features</h4> 
         <ul>
-          {features.map((feature) =><li>{feature}</li>)}
+          {features.map((feature) =><li data-aos="fade-up">{feature}</li>)}
         </ul>
         <h4>Tech Stack Used</h4> 
-        <ul>
-          {tech.map((technology) =><li>{technology}</li>)}
-        </ul>
-      </div>
+        {isTablet?techIco.map((icon)=><img src={icon} data-aos="fade-up"/>):<ul>
+          {tech.map((technology) =><li data-aos="fade-up">{technology}</li>)}
+        </ul>}
+      </div></>}
     </div>
 
   )

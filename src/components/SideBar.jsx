@@ -1,21 +1,15 @@
-import React, { useContext, useState } from 'react'
-import logo from "../assets/logo.png"
-import "./NavBar.css"
+import React, { useContext } from "react";
+import { bubble as Menu } from "react-burger-menu";
 import { Link } from 'react-scroll'
-import { ScreenContext } from '../context/ScreenContextProvider'
-import { slide as Menu } from 'react-burger-menu'
-import SideBar from './SideBar'
+import { ScreenContext } from "../context/ScreenContextProvider";
+import "./SideBar.css"
 
-const NavBar = () => {
-      
-      const { isMobile, isActive, isAbout, isSkills, isProjects, setActive, setAbout, setSkills, setProjects} = useContext(ScreenContext)
+export default props => {
+    const {isActive, isAbout, isSkills, isProjects, setActive, setAbout, setSkills, setProjects} = useContext(ScreenContext)
   return (
-    <div className='navbar' id='nav'>
-        <img src={logo} alt='logo' />
-        {isMobile?<SideBar pageWrapId={"App"} outerContainerId={"nav"} />:<div className='navChild'>
-        
-            <Link 
-            className={`links ${isActive}`} 
+    <Menu {...props} right noOverlay>
+      <Link 
+            className={`links ${isActive} menu-item`} 
       to="home" 
       spy={true} 
       smooth={true} 
@@ -26,7 +20,7 @@ const NavBar = () => {
        >Home</Link>
       
             <Link 
-            className={`links ${isAbout}`}
+            className={`links ${isAbout} menu-item`}
       to="about" 
       spy={true} 
       smooth={true} 
@@ -38,7 +32,7 @@ const NavBar = () => {
       
       
             <Link 
-            className={`links ${isSkills}`}
+            className={`links ${isSkills} menu-item`}
       to="skills" 
       spy={true} 
       smooth={true} 
@@ -51,7 +45,7 @@ const NavBar = () => {
       
       
             <Link 
-            className={`links ${isProjects}`}
+            className={`links ${isProjects} menu-item`}
       to="projects" 
       spy={true} 
       smooth={true} 
@@ -63,17 +57,14 @@ const NavBar = () => {
       
       
             <Link  
-            className={`links`}
+            className={`links menu-item`}
       to="contact" 
       spy={true} 
       smooth={true} 
       offset={-100} 
       duration={1500} 
-      >Contact</Link>
-      
-          </div>}
-    </div>
-  )
-}
 
-export default NavBar
+      >Contact</Link>
+    </Menu>
+  );
+};
