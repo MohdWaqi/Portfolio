@@ -79,7 +79,7 @@ function App() {
         <a onMouseOut={mouseOutEvent} onMouseOver={mouseOverEvent} href="https://api.whatsapp.com/send?phone=918755075132&text=Hello Waqi"><img src="https://cdn2.iconfinder.com/data/icons/social-micon/512/whatsapp-256.png"/></a>
         <a onMouseOut={mouseOutEvent} onMouseOver={mouseOverEvent} href='tel:+918755075132'><img src="https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_local_phone_48px-256.png"/></a>
       </div>
-
+      <p style={{textAlign:"center"}}>Developed by: Mohd Waqi Pervez</p>
     </div>
     </div>
     </div>
