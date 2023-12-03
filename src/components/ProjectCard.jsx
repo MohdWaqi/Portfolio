@@ -2,9 +2,11 @@ import React, { useContext } from 'react'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel'
 import { ScreenContext } from '../context/ScreenContextProvider';
+import { MouseContext } from '../context/MouseContextProvider';
 
 const ProjectCard = ({projectOn, techIco, description, images, features, tech, deploy}) => {
   const {isTablet, isMobile} = useContext(ScreenContext)
+  const {mouseOutEvent, mouseOverEvent} = useContext(MouseContext)
   return (
       <div className='projects'>
     {isMobile?<><a href={deploy} data-aos="fade-up" >
@@ -20,7 +22,7 @@ const ProjectCard = ({projectOn, techIco, description, images, features, tech, d
         {isTablet?techIco.map((icon)=><img src={icon} data-aos="fade-up"/>):<ul>
           {tech.map((technology) =><li data-aos="fade-up">{technology}</li>)}
         </ul>}
-      </div></>:<><a href={deploy} data-aos="fade-up" >
+      </div></>:<><a onMouseOut={mouseOutEvent} onMouseOver={mouseOverEvent} href={deploy} data-aos="fade-up" >
     <Carousel autoPlay width={isTablet?400:600} showArrows={false} showThumbs={false} showStatus={false} infiniteLoop>
         {images.map((image)=><img src={image}/>)}
     </Carousel>

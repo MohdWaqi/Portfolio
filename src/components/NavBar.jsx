@@ -1,17 +1,18 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext } from 'react'
 import logo from "../assets/logo.png"
 import "./NavBar.css"
 import { Link } from 'react-scroll'
 import { ScreenContext } from '../context/ScreenContextProvider'
-import { slide as Menu } from 'react-burger-menu'
+
 import SideBar from './SideBar'
+import { MouseContext } from '../context/MouseContextProvider'
 
 const NavBar = () => {
-      
+      const{mouseOverEvent, mouseOutEvent} = useContext(MouseContext)
       const { isMobile, isActive, isAbout, isSkills, isProjects, setActive, setAbout, setSkills, setProjects} = useContext(ScreenContext)
   return (
     <div className='navbar' id='nav'>
-        <img src={logo} alt='logo' />
+        <img src={logo} onMouseOut={mouseOutEvent} onMouseOver={mouseOverEvent} alt='logo' />
         {isMobile?<SideBar pageWrapId={"App"} outerContainerId={"nav"} />:<div className='navChild'>
         
             <Link 
@@ -23,6 +24,7 @@ const NavBar = () => {
       duration={800}
       onSetActive={()=>{setActive("bg")}}
       onSetInactive={()=>{setActive("")}}
+      onMouseOut={mouseOutEvent} onMouseOver={mouseOverEvent}
        >Home</Link>
       
             <Link 
@@ -34,6 +36,7 @@ const NavBar = () => {
       duration={800}
       onSetActive={()=>{setAbout("bg")}}
       onSetInactive={()=>{setAbout("")}}
+      onMouseOut={mouseOutEvent} onMouseOver={mouseOverEvent}
        >About</Link>
       
       
@@ -47,6 +50,7 @@ const NavBar = () => {
       duration={1500}
       onSetActive={()=>{setSkills("bg")}}
       onSetInactive={()=>{setSkills("")}} 
+      onMouseOut={mouseOutEvent} onMouseOver={mouseOverEvent}
       >Skills</Link>
       
       
@@ -59,6 +63,7 @@ const NavBar = () => {
       duration={1500}
       onSetActive={()=>{setProjects("bg")}}
       onSetInactive={()=>{setProjects("")}}
+      onMouseOut={mouseOutEvent} onMouseOver={mouseOverEvent}
        >Projects</Link>
       
       
@@ -69,6 +74,7 @@ const NavBar = () => {
       smooth={true} 
       offset={-100} 
       duration={1500} 
+      onMouseOut={mouseOutEvent} onMouseOver={mouseOverEvent}
       >Contact</Link>
       
           </div>}
