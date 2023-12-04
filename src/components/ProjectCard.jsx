@@ -11,7 +11,7 @@ const ProjectCard = ({projectOn, techIco, description, images, features, tech, d
       <div className='projects'>
     {isMobile?<><a href={deploy} data-aos="fade-up" >
     <Carousel autoPlay width={300} showArrows={false} showThumbs={false} showStatus={false} infiniteLoop>
-        {images.map((image)=><img src={image}/>)}
+        {images.map((image, index)=><img key={index} src={image}/>)}
     </Carousel>
     </a>
       <div id="details">
@@ -19,12 +19,12 @@ const ProjectCard = ({projectOn, techIco, description, images, features, tech, d
         <hr data-aos="fade-up"/>
         <p data-aos="fade-up">{description}</p>
         <h4>Tech Stack Used</h4> 
-        {isTablet?techIco.map((icon)=><img src={icon} data-aos="fade-up"/>):<ul>
-          {tech.map((technology) =><li data-aos="fade-up">{technology}</li>)}
+        {isTablet?techIco.map((icon, index)=><img key={index} src={icon} data-aos="fade-up"/>):<ul>
+          {tech.map((technology, index) =><li key={index} data-aos="fade-up">{technology}</li>)}
         </ul>}
       </div></>:<><a onMouseOut={mouseOutEvent} onMouseOver={mouseOverEvent} href={deploy} data-aos="fade-up" >
     <Carousel autoPlay width={isTablet?400:600} showArrows={false} showThumbs={false} showStatus={false} infiniteLoop>
-        {images.map((image)=><img src={image}/>)}
+        {images.map((image, index)=><img key={index} src={image}/>)}
     </Carousel>
     </a>
       <div id="details">
@@ -33,11 +33,11 @@ const ProjectCard = ({projectOn, techIco, description, images, features, tech, d
         <p data-aos="fade-up">{description}</p>
         <h4 data-aos="fade-up">Features</h4> 
         <ul>
-          {features.map((feature) =><li data-aos="fade-up">{feature}</li>)}
+          {features.map((feature, index) =><li key={index} data-aos="fade-up">{feature}</li>)}
         </ul>
         <h4>Tech Stack Used</h4> 
-        {isTablet?techIco.map((icon)=><img src={icon} data-aos="fade-up"/>):<ul>
-          {tech.map((technology) =><li data-aos="fade-up">{technology}</li>)}
+        {isTablet?techIco.map((icon, index)=><img key={index} src={icon} data-aos="fade-up"/>):<ul>
+          {tech.map((technology, index) =><li key={index} data-aos="fade-up">{technology}</li>)}
         </ul>}
       </div></>}
     </div>

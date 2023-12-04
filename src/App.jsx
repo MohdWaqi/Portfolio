@@ -1,6 +1,6 @@
 import './App.css'
 import NavBar from './components/NavBar'
-import myImage from "./assets/landing1.jpg"
+import myImage from "./assets/image1.png"
 import chakra from "./assets/chakra.png"
 import ProjectCard from './components/ProjectCard'
 import emailIcon from "./assets/gmail.png"
@@ -10,6 +10,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css'
 import Cursor from './components/Cursor'
 import { MouseContext } from './context/MouseContextProvider'
+import resume from "./assets/Mohd-Waqi-Pervez-Resume.pdf"
 
 
 
@@ -18,7 +19,11 @@ function App() {
  const{mouseOverEvent, mouseOutEvent} = useContext(MouseContext)
  useEffect(()=>{
   AOS.init({offset:isMobile?80:150})
+  document.querySelector(".download").addEventListener("click",handleClick)
  },[])
+const handleClick=()=>{
+    open("https://drive.google.com/file/d/16EASaH9oQ-2pHXiX8rNLMt8X_Y0i1ARH/view?usp=drive_link")
+}
 
   return (
     <div className="app" id='App'>
@@ -32,7 +37,7 @@ function App() {
       <h2 onMouseOut={mouseOutEvent} onMouseOver={mouseOverEvent}>Hello!! I am </h2>
       <h1 onMouseOut={mouseOutEvent} onMouseOver={mouseOverEvent}>Mohd Waqi Pervez</h1>
       <h2 onMouseOut={mouseOutEvent} onMouseOver={mouseOverEvent}>a <span>React Developer</span></h2>
-      <a onMouseOut={mouseOutEvent} onMouseOver={mouseOverEvent} href='https://www.google.co.in/' target="_blank" download="MohdWaqi-Pervez-Resume.pdf"><button className='btn'>Resume</button></a>
+      <a className='download' onMouseOut={mouseOutEvent} onMouseOver={mouseOverEvent} href={resume} download="Mohd-Waqi-Pervez-Resume.pdf"><button className='btn'>Resume</button></a>
     </div>
 
     </div>
@@ -46,7 +51,7 @@ function App() {
 
     </div>
     <div name='skills' className='sections'>
-      <h1 onMouseOut={mouseOutEvent} onMouseOver={mouseOverEvent} data-aos="fade-up">Skills</h1>
+      <h1 data-aos="fade-up" onMouseOut={mouseOutEvent} onMouseOver={mouseOverEvent} >Skills</h1>
       <hr data-aos="fade-up"/>
       <div className='skills'>
         <img onMouseOut={mouseOutEvent} onMouseOver={mouseOverEvent} data-aos="fade-up" src='https://cdn1.iconfinder.com/data/icons/logotypes/32/badge-html-5-512.png'/>
@@ -67,8 +72,8 @@ function App() {
     <div  name='projects' className='sections'>
       <h1 onMouseOut={mouseOutEvent} onMouseOver={mouseOverEvent} data-aos="fade-up">Projects</h1>
       <hr data-aos="fade-up"/>
-      <ProjectCard techIco={['https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-256.png',chakra]} images={['https://i.postimg.cc/k53Kkfq6/Vite-React-Google-Chrome-21-11-2023-07-56-24.png','https://i.postimg.cc/gjWYpLrK/Vite-React-Google-Chrome-21-11-2023-07-57-33.png','https://i.postimg.cc/J4sT8YVP/Vite-React-Google-Chrome-21-11-2023-07-58-31.png','https://i.postimg.cc/wBwJ7HDJ/Vite-React-Google-Chrome-21-11-2023-07-58-48.png']} features={["Ability to Sort displayed Products.", "Ability to login the user with proper logged in successful alert.","User Friendly.","Fullscreen Mode."]} tech={["React js","Chakra UI","Javascript Utilities & Libraries"]} description="This is the clone UI of India's largest e-commerce store." projectOn="Myntra Clone" deploy='https://waqi-myntra.netlify.app/'/>
-      <ProjectCard techIco={['https://cdn1.iconfinder.com/data/icons/logotypes/32/badge-html-5-512.png','https://cdn1.iconfinder.com/data/icons/logotypes/32/badge-css-3-512.png','https://cdn2.iconfinder.com/data/icons/designer-skills/128/code-programming-javascript-software-develop-command-language-256.png']} images={['https://i.postimg.cc/d0ycMnHp/Document-Google-Chrome-02-12-2023-16-15-41.png','https://i.postimg.cc/6q0f8J3S/Document-Google-Chrome-02-12-2023-16-17-11.png','https://i.postimg.cc/brB4FBcZ/Document-Google-Chrome-02-12-2023-16-18-24.png']} features={["Different UI in different devices", "Responsive","User Friendly.","Fullscreen Mode."]} tech={["HTML","CSS","Vanilla Javascript"]} description="This is the responsive of superhero resume of Batman." projectOn="Superhero Resume" deploy='https://coruscating-semifreddo-d5aa34.netlify.app/'/>
+      <ProjectCard techIco={['https://cdn1.iconfinder.com/data/icons/logotypes/32/badge-html-5-512.png', 'https://cdn2.iconfinder.com/data/icons/designer-skills/128/code-programming-javascript-software-develop-command-language-256.png', 'https://cdn1.iconfinder.com/data/icons/logotypes/32/badge-css-3-512.png', 'https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-256.png',chakra, 'https://cdn3.iconfinder.com/data/icons/social-media-2169/24/social_media_social_media_logo_git-512.png']} images={['https://i.postimg.cc/k53Kkfq6/Vite-React-Google-Chrome-21-11-2023-07-56-24.png','https://i.postimg.cc/gjWYpLrK/Vite-React-Google-Chrome-21-11-2023-07-57-33.png','https://i.postimg.cc/J4sT8YVP/Vite-React-Google-Chrome-21-11-2023-07-58-31.png','https://i.postimg.cc/wBwJ7HDJ/Vite-React-Google-Chrome-21-11-2023-07-58-48.png']} features={["Ability to Sort displayed Products.", "Ability to login the user with proper logged in successful alert.","User Friendly.","Fullscreen Mode."]} tech={["React js","Chakra UI","Javascript Utilities & Libraries"]} description="This is the clone UI of India's largest e-commerce store." projectOn="Myntra Clone" deploy='https://waqi-myntra.netlify.app/'/>
+      <ProjectCard techIco={['https://cdn1.iconfinder.com/data/icons/logotypes/32/badge-html-5-512.png','https://cdn1.iconfinder.com/data/icons/logotypes/32/badge-css-3-512.png', 'https://cdn3.iconfinder.com/data/icons/social-media-2169/24/social_media_social_media_logo_git-512.png']} images={['https://i.postimg.cc/d0ycMnHp/Document-Google-Chrome-02-12-2023-16-15-41.png','https://i.postimg.cc/6q0f8J3S/Document-Google-Chrome-02-12-2023-16-17-11.png','https://i.postimg.cc/brB4FBcZ/Document-Google-Chrome-02-12-2023-16-18-24.png']} features={["Different UI in different devices", "Responsive","User Friendly.","Fullscreen Mode."]} tech={["HTML","CSS","Git"]} description="This is the responsive superhero resume of Batman." projectOn="Superhero Resume" deploy='https://coruscating-semifreddo-d5aa34.netlify.app/'/>
     </div>
     <div name='contact' className='sections contact'>
       <h1 data-aos="fade-up">Get In Touch</h1>

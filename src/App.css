@@ -72,7 +72,7 @@
   line-height:45px;
 }
 .about> img{
-  width: 400px
+  width: 300px
 }
 .skills img{
  width:150px;
@@ -153,11 +153,11 @@ margin-top:10%
   }
   .about{
     flex-direction:column;
-    background:url("./assets/landing1.jpg");
+    background:url("./assets/image3.png");
     background-size: cover;
     background-repeat:no-repeat;
-    background-position:center center;
-    background-color: rgba(0,0,0, 0.7);
+    background-position:top;
+    background-color: rgba(0,0,0, 0.5);
     background-blend-mode: darken; 
     padding:5%;
     border-radius:10px;
