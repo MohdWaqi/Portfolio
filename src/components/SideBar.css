@@ -1,6 +1,3 @@
-
-
-
 #App {
   text-align: center;
   overflow: auto;
@@ -11,7 +8,7 @@
 .bm-item {
   display: inline-block;
 
-  /* Our sidebar item styling */
+  /*sidebar item styling */
   text-decoration: none;
   margin-bottom: 10px;
   color: white;

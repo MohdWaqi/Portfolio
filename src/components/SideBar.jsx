@@ -3,6 +3,7 @@ import { bubble as Menu } from "react-burger-menu";
 import { Link } from 'react-scroll'
 import { ScreenContext } from "../context/ScreenContextProvider";
 import "./SideBar.css"
+import resume from "../assets/Mohd-Waqi-Pervez-Resume.pdf"
 
 export default props => {
     const {isActive, isAbout, isSkills, isProjects, setActive, setAbout, setSkills, setProjects} = useContext(ScreenContext)
@@ -65,6 +66,7 @@ export default props => {
       duration={1500} 
 
       >Contact</Link>
+      <a className="links download" href={resume} download="Mohd-Waqi-Pervez-Resume.pdf">Resume</a>
     </Menu>
   );
 };

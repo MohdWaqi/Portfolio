@@ -19,7 +19,10 @@ function App() {
  const{mouseOverEvent, mouseOutEvent} = useContext(MouseContext)
  useEffect(()=>{
   AOS.init({offset:isMobile?80:150})
-  document.querySelector(".download").addEventListener("click",handleClick)
+  let openResume = document.querySelectorAll(".download")
+  for(let element of openResume){
+    element.addEventListener("click", handleClick)
+  }
  },[])
 const handleClick=()=>{
     open("https://drive.google.com/file/d/1BnQyPh4l39Xo4iMkljT1BJxE2nNkIU_b/view?usp=sharing")

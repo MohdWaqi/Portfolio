@@ -3,7 +3,7 @@ import logo from "../assets/logo.png"
 import "./NavBar.css"
 import { Link } from 'react-scroll'
 import { ScreenContext } from '../context/ScreenContextProvider'
-
+import resume from "../assets/Mohd-Waqi-Pervez-Resume.pdf"
 import SideBar from './SideBar'
 import { MouseContext } from '../context/MouseContextProvider'
 
@@ -13,7 +13,7 @@ const NavBar = () => {
   return (
     <div className='navbar' id='nav'>
         <img src={logo} onMouseOut={mouseOutEvent} onMouseOver={mouseOverEvent} alt='logo' />
-        {isMobile?<SideBar pageWrapId={"App"} outerContainerId={"nav"} />:<div className='navChild'>
+        {isMobile?<SideBar pageWrapId={"App"} outerContainerId={"nav"} />:<><div className='navChild'>
         
             <Link 
             className={`links ${isActive}`} 
@@ -77,7 +77,8 @@ const NavBar = () => {
       onMouseOut={mouseOutEvent} onMouseOver={mouseOverEvent}
       >Contact</Link>
       
-          </div>}
+          </div>
+          <div><a className='download' onMouseOut={mouseOutEvent} onMouseOver={mouseOverEvent} href={resume} download="Mohd-Waqi-Pervez-Resume.pdf">Resume</a></div></>}
     </div>
   )
 }
