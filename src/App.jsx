@@ -11,6 +11,7 @@ import 'aos/dist/aos.css'
 import Cursor from './components/Cursor'
 import { MouseContext } from './context/MouseContextProvider'
 import resume from "./assets/Mohd-Waqi-Pervez-Resume.pdf"
+import SkillDisplay from './components/SkillDisplay'
 
 
 
@@ -23,7 +24,7 @@ function App() {
   for(let element of openResume){
     element.addEventListener("click", handleClick)
   }
- },[])
+ },[isMobile])
 const handleClick=()=>{
     open("https://drive.google.com/file/d/1BnQyPh4l39Xo4iMkljT1BJxE2nNkIU_b/view?usp=sharing")
 }
@@ -53,23 +54,28 @@ const handleClick=()=>{
       </div>
 
     </div>
-    <div name='skills' className='sections'>
+    <div name='skills' className='sections skillCont'>
       <h1 data-aos="fade-up" onMouseOut={mouseOutEvent} onMouseOver={mouseOverEvent} >Skills</h1>
       <hr data-aos="fade-up"/>
+      <h2 data-aos="fade-up">Tech Stack</h2>
       <div className='skills'>
-        <img onMouseOut={mouseOutEvent} onMouseOver={mouseOverEvent} data-aos="fade-up" src='https://cdn1.iconfinder.com/data/icons/logotypes/32/badge-html-5-512.png'/>
-        <img onMouseOut={mouseOutEvent} onMouseOver={mouseOverEvent} data-aos="fade-up" src='https://cdn1.iconfinder.com/data/icons/logotypes/32/badge-css-3-512.png'/>
-        <img onMouseOut={mouseOutEvent} onMouseOver={mouseOverEvent} data-aos="fade-up" src='https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/tailwind-css-icon.png'/>
-        <img onMouseOut={mouseOutEvent} onMouseOver={mouseOverEvent} data-aos="fade-up" src='https://cdn2.iconfinder.com/data/icons/designer-skills/128/code-programming-javascript-software-develop-command-language-256.png'/>
-        <img onMouseOut={mouseOutEvent} onMouseOver={mouseOverEvent} data-aos="fade-up" src='https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-256.png'/>
-        <img onMouseOut={mouseOutEvent} onMouseOver={mouseOverEvent} data-aos="fade-up" src={chakra}/>
-        <img onMouseOut={mouseOutEvent} onMouseOver={mouseOverEvent} data-aos="fade-up" src='https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/bootstrap-5-logo-icon.svg'/>
-        <img onMouseOut={mouseOutEvent} onMouseOver={mouseOverEvent} data-aos="fade-up" src='https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/postman-icon.svg'/>
-        <img onMouseOut={mouseOutEvent} onMouseOver={mouseOverEvent} data-aos="fade-up" src='https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/267_Python_logo-256.png'/>
-        <img onMouseOut={mouseOutEvent} onMouseOver={mouseOverEvent} data-aos="fade-up" src='https://cdn3.iconfinder.com/data/icons/social-media-2169/24/social_media_social_media_logo_git-512.png'/>
-        <img onMouseOut={mouseOutEvent} onMouseOver={mouseOverEvent} data-aos="fade-up" src='https://cdn0.iconfinder.com/data/icons/shift-logotypes/32/Github-256.png'/>
-        <img onMouseOut={mouseOutEvent} onMouseOver={mouseOverEvent} data-aos="fade-up" src='https://uxwing.com/wp-content/themes/uxwing/download/internet-network-technology/artificial-intelligence-ai-icon.svg'/>
-      </div>
+        <SkillDisplay image='https://cdn1.iconfinder.com/data/icons/logotypes/32/badge-html-5-512.png' label="HTML" />
+        <SkillDisplay image='https://cdn1.iconfinder.com/data/icons/logotypes/32/badge-css-3-512.png' label="CSS" />
+        <SkillDisplay image='https://cdn2.iconfinder.com/data/icons/designer-skills/128/code-programming-javascript-software-develop-command-language-256.png' label="JavaScript" />
+        <SkillDisplay image='https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/tailwind-css-icon.png' label="Tailwindcss" />
+        <SkillDisplay image='https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-256.png' label="React.js" />
+        <SkillDisplay image={chakra} label="Chakra UI" />
+        <SkillDisplay image='https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/bootstrap-5-logo-icon.svg' label="Bootstrap" />
+        <SkillDisplay image='https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/267_Python_logo-256.png' label="Python" />
+        <SkillDisplay image='https://cdn3.iconfinder.com/data/icons/social-media-2169/24/social_media_social_media_logo_git-512.png' label="Git" />
+    </div>
+      <h2 data-aos="fade-up">Tech Tools</h2>
+      <div className='skills'>
+        <SkillDisplay image='https://cdn0.iconfinder.com/data/icons/shift-logotypes/32/Github-256.png' label="Github" />
+        <SkillDisplay image='https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/visual-studio-code-icon.svg' label="VS Code" />
+        <SkillDisplay image='https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/postman-icon.svg' label="Postman" />
+        <SkillDisplay image='https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/pycharm-icon.svg' label="Pycharm" />
+     </div>
 
     </div>
     <div  name='projects' className='sections'>

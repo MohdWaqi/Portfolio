@@ -88,6 +88,23 @@
   grid-gap:70px;
   
 }
+.skills > div{
+  position: relative;
+  height:120%;
+}
+.skillCont h2{
+  margin-top:4%;
+  color:#BDD7F7
+}
+.skillCont{
+  margin-bottom:5%
+}
+.skills  h3{
+  margin-bottom:0px;
+  position:absolute;
+  bottom:0;
+  width:100%;
+}
 .skills img:hover, .contact img:hover{
   transform:scale(1.5)
 }
@@ -137,10 +154,13 @@ margin-top:10%
     left:15%;
     top:35%
   }
+  .skillCont h2{
+    margin-top:8%;
+  }
   .landingPage h1{
     font-size:3.8rem
   }
-  .landingPage h2{
+  .landingPage h2 {
     font-size:1.9rem;
   }
   .btn{
@@ -149,7 +169,10 @@ margin-top:10%
   .sections h1{
     font-size:1.5rem
   }
-  .about h3{
+  .skillCont h2{
+    font-size:1.25rem
+  }
+  .about h3, .skills h3{
     font-size:1rem;
   }
   .about{
@@ -212,9 +235,15 @@ margin-top:10%
   .sections hr{
     width:40%
   }
-  .about h3{
+  .about h3, {
     font-size:0.9rem;
     line-height:35px
+  }
+  .skills h3{
+    font-size:0.6rem
+  }
+  .skillCont h2{
+    margin-top:15%
   }
   
   .skills{
