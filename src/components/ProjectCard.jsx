@@ -3,8 +3,9 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel'
 import { ScreenContext } from '../context/ScreenContextProvider';
 import { MouseContext } from '../context/MouseContextProvider';
+import link from "../assets/link.png"
 
-const ProjectCard = ({projectOn, techIco, description, images, features, tech, deploy}) => {
+const ProjectCard = ({projectOn, techIco, description, images, features, tech, deploy, github}) => {
   const {isTablet, isMobile} = useContext(ScreenContext)
   const {mouseOutEvent, mouseOverEvent} = useContext(MouseContext)
   return (
@@ -14,6 +15,10 @@ const ProjectCard = ({projectOn, techIco, description, images, features, tech, d
         {images.map((image, index)=><img key={index} src={image}/>)}
     </Carousel>
     </a>
+    <div id='showLinks' data-aos="fade-up">
+      <a href={deploy} onMouseOut={mouseOutEvent} onMouseOver={mouseOverEvent}><img src={link}/></a>
+      <a href={github} onMouseOut={mouseOutEvent} onMouseOver={mouseOverEvent}><img src="https://cdn0.iconfinder.com/data/icons/shift-logotypes/32/Github-256.png"/></a>
+    </div>
       <div id="details">
         <h2 data-aos="fade-up">{projectOn}</h2>
         <hr data-aos="fade-up"/>
@@ -27,6 +32,10 @@ const ProjectCard = ({projectOn, techIco, description, images, features, tech, d
         {images.map((image, index)=><img key={index} src={image}/>)}
     </Carousel>
     </a>
+    <div id='showLinks' data-aos="fade-up">
+      <a href={deploy} onMouseOut={mouseOutEvent} onMouseOver={mouseOverEvent}><img src={link}/></a>
+      <a href={github} onMouseOut={mouseOutEvent} onMouseOver={mouseOverEvent}><img src="https://cdn0.iconfinder.com/data/icons/shift-logotypes/32/Github-256.png"/></a>
+    </div>
       <div id="details">
         <h2 data-aos="fade-up">{projectOn}</h2>
         <hr data-aos="fade-up"/>
