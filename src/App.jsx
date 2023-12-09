@@ -26,7 +26,7 @@ function App() {
   }
  },[isMobile])
 const handleClick=()=>{
-    open("https://drive.google.com/file/d/1BnQyPh4l39Xo4iMkljT1BJxE2nNkIU_b/view?usp=sharing")
+    open("https://drive.google.com/file/d/1tH0_LlIviwSo1yleoLGRZfvF3sUgyucT/view?usp=sharing")
 }
 
   return (
