@@ -11,14 +11,14 @@ const ProjectCard = ({projectOn, techIco, description, images, features, tech, d
   return (
     
     <div className='projects'>
-    {isMobile?<><a href={deploy} data-aos="fade-up" >
+    {isMobile?<><a href={deploy} target="_blank" data-aos="fade-up" >
     <Carousel autoPlay width={300} showArrows={false} showThumbs={false} showStatus={false} infiniteLoop>
         {images.map((image, index)=><img key={index} src={image}/>)}
     </Carousel>
     </a>
     <div id='showLinks' data-aos="fade-up">
-      <a href={deploy} onMouseOut={mouseOutEvent} onMouseOver={mouseOverEvent}><img src={link}/></a>
-      <a href={github} onMouseOut={mouseOutEvent} onMouseOver={mouseOverEvent}><img src="https://cdn0.iconfinder.com/data/icons/shift-logotypes/32/Github-256.png"/></a>
+      <a href={deploy} target="_blank" onMouseOut={mouseOutEvent} onMouseOver={mouseOverEvent}><img src={link}/></a>
+      <a href={github} target="_blank" onMouseOut={mouseOutEvent} onMouseOver={mouseOverEvent}><img src="https://cdn0.iconfinder.com/data/icons/shift-logotypes/32/Github-256.png"/></a>
     </div>
       <div id="details">
         <h2 data-aos="fade-up">{projectOn}</h2>
