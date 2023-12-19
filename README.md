@@ -1,8 +1,22 @@
-# React + Vite
+# Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> - This project showcases skills and projects made by Mohd Waqi Pervez.
+> - It is responsive.
+> - It is animated.
 
-Currently, two official plugins are available:
+## Deploy Link
+> https://mohdwaqi.github.io/portfolio/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## View
+[![Mohd-Waqi-Pervez-Google-Chrome-09-12-2023-18-30-12.png](https://i.postimg.cc/5NYpdw9D/Mohd-Waqi-Pervez-Google-Chrome-09-12-2023-18-30-12.png)](https://postimg.cc/XpW99BCg)
+
+## Tech Stack Used
+> - HTML
+> - CSS
+> - JavaScript
+> - React.js
+> - Git
+> - Javascript Utilities
+
+## Developer
+> [@MohdWaqi](https://github.com/MohdWaqi)
