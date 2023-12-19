@@ -52,29 +52,43 @@ const handleClick=()=>{
         <h3 onMouseOut={mouseOutEvent} onMouseOver={mouseOverEvent}>Versatile Front End React Developer with expertise in HTML, CSS, and JavaScript. Proficient in crafting dynamic interfaces using React, Tailwind CSS, and Chakra UI. Quick learner adept at integrating innovative technologies like Generative AI. Skilled in Python, Git, and Github for collaborative project execution. Passionate about building impactful, user-centric solutions.</h3>
         {!isTablet&&<img onMouseOut={mouseOutEvent} onMouseOver={mouseOverEvent} src={myImage}/>}
       </div>
+      <div className='githubStatus'>
+      <img  data-aos="fade-up" onMouseOut={mouseOutEvent} onMouseOver={mouseOverEvent} src="https://github-readme-stats.vercel.app/api/top-langs?username=mohdwaqi&show_icons=true&locale=en&layout=compact&theme=transparent&hide_border=true" alt="mohdwaqi" />
 
+<img data-aos="fade-up" onMouseOut={mouseOutEvent} onMouseOver={mouseOverEvent} src="https://github-readme-stats.vercel.app/api?username=mohdwaqi&show_icons=true&locale=en&theme=transparent&hide_border=true&title_color=white&text_color=#FFFFFF" alt="mohdwaqi" /><br/>
+
+<img data-aos="fade-up" onMouseOut={mouseOutEvent} onMouseOver={mouseOverEvent} src="https://github-readme-streak-stats.herokuapp.com/?user=mohdwaqi&theme=transparent&hide_border=true&title_color=white&text_color=#FFFFFF" alt="mohdwaqi" />
+      </div>
     </div>
     <div name='skills' className='sections skillCont'>
       <h1 data-aos="fade-up" onMouseOut={mouseOutEvent} onMouseOver={mouseOverEvent} >Skills</h1>
       <hr data-aos="fade-up"/>
       <h2 data-aos="fade-up">Tech Stack</h2>
       <div className='skills'>
-        <SkillDisplay image='https://cdn1.iconfinder.com/data/icons/logotypes/32/badge-html-5-512.png' label="HTML" />
-        <SkillDisplay image='https://cdn1.iconfinder.com/data/icons/logotypes/32/badge-css-3-512.png' label="CSS" />
-        <SkillDisplay image='https://cdn2.iconfinder.com/data/icons/designer-skills/128/code-programming-javascript-software-develop-command-language-256.png' label="JavaScript" />
-        <SkillDisplay image='https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/tailwind-css-icon.png' label="Tailwindcss" />
         <SkillDisplay image='https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-256.png' label="React.js" />
         <SkillDisplay image={chakra} label="Chakra UI" />
+        <SkillDisplay image='https://cdn1.iconfinder.com/data/icons/logotypes/32/badge-html-5-512.png' label="HTML" />
+        <SkillDisplay image='https://cdn1.iconfinder.com/data/icons/logotypes/32/badge-css-3-512.png' label="CSS" />
+        <SkillDisplay image='https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/tailwind-css-icon.png' label="Tailwindcss" />
+        <SkillDisplay image='https://cdn2.iconfinder.com/data/icons/designer-skills/128/code-programming-javascript-software-develop-command-language-256.png' label="JavaScript" />
         <SkillDisplay image='https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/bootstrap-5-logo-icon.svg' label="Bootstrap" />
         <SkillDisplay image='https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/267_Python_logo-256.png' label="Python" />
+        <SkillDisplay image='https://cdn4.iconfinder.com/data/icons/logos-3/456/nodejs-new-pantone-black-256.png' label="Node js" />
         <SkillDisplay image='https://cdn3.iconfinder.com/data/icons/social-media-2169/24/social_media_social_media_logo_git-512.png' label="Git" />
     </div>
       <h2 data-aos="fade-up">Tech Tools</h2>
       <div className='skills'>
-        <SkillDisplay image='https://cdn0.iconfinder.com/data/icons/shift-logotypes/32/Github-256.png' label="Github" />
         <SkillDisplay image='https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/visual-studio-code-icon.svg' label="VS Code" />
-        <SkillDisplay image='https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/postman-icon.svg' label="Postman" />
         <SkillDisplay image='https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/pycharm-icon.svg' label="Pycharm" />
+        <SkillDisplay image='https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/postman-icon.svg' label="Postman" />
+        <SkillDisplay image='https://seeklogo.com/images/R/replit-icon-logo-A666709FE9-seeklogo.com.png' label="Replit" />
+        <SkillDisplay image='https://seeklogo.com/images/N/npm-logo-F0E1FE956F-seeklogo.com.png' label="NPM" />
+        <SkillDisplay image='https://seeklogo.com/images/N/netlify-icon-logo-7CF6AA9DC7-seeklogo.com.png' label="Netlify" />
+        <SkillDisplay image='https://seeklogo.com/images/V/vite-logo-BFD4283991-seeklogo.com.png' label="Vite" />
+        <SkillDisplay image='https://seeklogo.com/images/C/codepen-logo-D1012149C3-seeklogo.com.png' label="Codepen" />
+        <SkillDisplay image='https://seeklogo.com/images/H/heroku-logo-90FDE34A7D-seeklogo.com.png' label="Heroku" />
+        <SkillDisplay image='https://seeklogo.com/images/F/firebase-logo-402F407EE0-seeklogo.com.png' label="Firebase" />
+        <SkillDisplay image='https://cdn0.iconfinder.com/data/icons/shift-logotypes/32/Github-256.png' label="Github" />
      </div>
 
     </div>
@@ -93,7 +107,7 @@ const handleClick=()=>{
         <a onMouseOut={mouseOutEvent} onMouseOver={mouseOverEvent} href="https://api.whatsapp.com/send?phone=918755075132&text=Hello Waqi"><img src="https://cdn2.iconfinder.com/data/icons/social-micon/512/whatsapp-256.png"/></a>
         <a onMouseOut={mouseOutEvent} onMouseOver={mouseOverEvent} href='tel:+918755075132'><img src="https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_local_phone_48px-256.png"/></a>
       </div>
-      <p style={{textAlign:"center"}}>Developed by: Mohd Waqi Pervez</p>
+      <p style={{textAlign:"center"}}>Developed by: Mohd Waqi Pervez || mohdwaqipervez@gmail.com</p>
     </div>
     </div>
     </div>

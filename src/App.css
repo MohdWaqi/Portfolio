@@ -2,7 +2,7 @@
   margin : 0px;
   font-family: 'Poppins', sans-serif;
   text-align: center;
-  color:white
+  color:white;
 }
 .app{
   background-color: #062040;
@@ -17,7 +17,13 @@
   position:relative;
   text-align:center;
 }
-
+.tech{
+  background-color:#4C89D3;
+  width:max-content;
+  padding:0 5%;
+  margin-top:2%;
+  border-radius:30px
+}
 .landingPage span{
   color:#8EBBF1
 }
@@ -114,11 +120,13 @@
   margin:auto;
   margin-top:5%;
   background-color: rgba(127, 128, 128,0.2);
+  /* background-color: rgba(138, 166, 200,0.2); */
   padding:2%;
   display:flex;
   gap:40px;
   border-radius:20px;
 }
+
 .projects img{
   width:600px;
   object-fit:scale-down;
@@ -150,6 +158,7 @@ margin-top:10%
   margin:5%;
   transition:1.5s
 }
+
 #showLinks{
   width:5%;
   display:flex;
@@ -162,7 +171,21 @@ margin-top:10%
   height:auto;
   border-radius:0
 }
+.githubStatus > img{
+  background-color: rgba(127, 128, 128,0.2);
+  border-radius:20px;
+  margin:2%
+}
+.githubStatus > img:first-child{
+  width:23%
+}
+.githubStatus{
+  margin-top:5%
+}
 @media (max-width: 1080px){
+  .app{
+    overflow-x: hidden;
+  }
   .landingPage > div{
     left:15%;
     top:35%
@@ -238,9 +261,23 @@ margin-top:10%
   #showLinks img{
     width:100%
   }
+  .githubStatus{
+    display:flex;
+    flex-direction:column;
+  }
+  .githubStatus img{
+    width:60%;
+    margin:5% auto;   
+  } 
+  .githubStatus img:first-child{
+    width:60%
+  } 
 }
 
 @media (max-width: 767px){
+  .app{
+    overflow-x: hidden;
+  }
   .landingPage{
     background: url("./assets/landing3.jpg");
     background-size: cover;
@@ -290,5 +327,19 @@ margin-top:10%
   }
   .contact img{
     width:7%;
+  }
+  .githubStatus img{
+    width:70%
+  }
+  .contact p{
+    font-size:0.65rem
+  }
+}
+@media (min-width: 1081px) and (max-width: 1300px){
+  .projects{
+    width:80%
+  }
+  .githubStatus > img:first-child{
+    width:28%
   }
 }

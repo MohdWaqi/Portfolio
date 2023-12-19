@@ -9,7 +9,8 @@ const ProjectCard = ({projectOn, techIco, description, images, features, tech, d
   const {isTablet, isMobile} = useContext(ScreenContext)
   const {mouseOutEvent, mouseOverEvent} = useContext(MouseContext)
   return (
-      <div className='projects'>
+    
+    <div className='projects'>
     {isMobile?<><a href={deploy} data-aos="fade-up" >
     <Carousel autoPlay width={300} showArrows={false} showThumbs={false} showStatus={false} infiniteLoop>
         {images.map((image, index)=><img key={index} src={image}/>)}
@@ -46,10 +47,11 @@ const ProjectCard = ({projectOn, techIco, description, images, features, tech, d
         </ul>
         <h4>Tech Stack Used</h4> 
         {isTablet?techIco.map((icon, index)=><img key={index} src={icon} data-aos="fade-up"/>):<ul>
-          {tech.map((technology, index) =><li key={index} data-aos="fade-up">{technology}</li>)}
+          {tech.map((technology, index) =><li key={index} data-aos="fade-up" className='tech'>{technology}</li>)}
         </ul>}
       </div></>}
     </div>
+    
 
   )
 }
