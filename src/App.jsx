@@ -101,11 +101,11 @@ const handleClick=()=>{
     <div name='contact' className='sections contact'>
       <h1 data-aos="fade-up">Get In Touch</h1>
       <div>
-        <a onMouseOut={mouseOutEvent} onMouseOver={mouseOverEvent} href='https://www.linkedin.com/in/mohd-waqi-pervez-52a432291/'><img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/square-linkedin-256.png"/></a>
-        <a onMouseOut={mouseOutEvent} onMouseOver={mouseOverEvent} href='mailto:mohdwaqipervez@gmail.com'><img src={emailIcon}/></a>
-        <a onMouseOut={mouseOutEvent} onMouseOver={mouseOverEvent} href='https://github.com/MohdWaqi'><img src="https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/github-256.png"/></a>
-        <a onMouseOut={mouseOutEvent} onMouseOver={mouseOverEvent} href="https://api.whatsapp.com/send?phone=918755075132&text=Hello Waqi"><img src="https://cdn2.iconfinder.com/data/icons/social-micon/512/whatsapp-256.png"/></a>
-        <a onMouseOut={mouseOutEvent} onMouseOver={mouseOverEvent} href='tel:+918755075132'><img src="https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_local_phone_48px-256.png"/></a>
+        <a onMouseOut={mouseOutEvent} onMouseOver={mouseOverEvent} target="_blank" href='https://www.linkedin.com/in/mohd-waqi-pervez-52a432291/'><img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/square-linkedin-256.png"/></a>
+        <a onMouseOut={mouseOutEvent} onMouseOver={mouseOverEvent} target="_blank" href='mailto:mohdwaqipervez@gmail.com'><img src={emailIcon}/></a>
+        <a onMouseOut={mouseOutEvent} onMouseOver={mouseOverEvent} target="_blank" href='https://github.com/MohdWaqi'><img src="https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/github-256.png"/></a>
+        <a onMouseOut={mouseOutEvent} onMouseOver={mouseOverEvent} target="_blank" href="https://api.whatsapp.com/send?phone=918755075132&text=Hello Waqi"><img src="https://cdn2.iconfinder.com/data/icons/social-micon/512/whatsapp-256.png"/></a>
+        <a onMouseOut={mouseOutEvent} onMouseOver={mouseOverEvent} target="_blank" href='tel:+918755075132'><img src="https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_local_phone_48px-256.png"/></a>
       </div>
       <p style={{textAlign:"center"}}>Developed by: Mohd Waqi Pervez || mohdwaqipervez@gmail.com</p>
     </div>

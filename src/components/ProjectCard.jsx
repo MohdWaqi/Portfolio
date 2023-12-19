@@ -28,14 +28,14 @@ const ProjectCard = ({projectOn, techIco, description, images, features, tech, d
         {isTablet?techIco.map((icon, index)=><img key={index} src={icon} data-aos="fade-up"/>):<ul>
           {tech.map((technology, index) =><li key={index} data-aos="fade-up">{technology}</li>)}
         </ul>}
-      </div></>:<><a onMouseOut={mouseOutEvent} onMouseOver={mouseOverEvent} href={deploy} data-aos="fade-up" >
+      </div></>:<><a onMouseOut={mouseOutEvent} onMouseOver={mouseOverEvent} href={deploy} target="_blank" data-aos="fade-up" >
     <Carousel autoPlay width={isTablet?400:600} showArrows={false} showThumbs={false} showStatus={false} infiniteLoop>
         {images.map((image, index)=><img key={index} src={image}/>)}
     </Carousel>
     </a>
     <div id='showLinks' data-aos="fade-up">
-      <a href={deploy} onMouseOut={mouseOutEvent} onMouseOver={mouseOverEvent}><img src={link}/></a>
-      <a href={github} onMouseOut={mouseOutEvent} onMouseOver={mouseOverEvent}><img src="https://cdn0.iconfinder.com/data/icons/shift-logotypes/32/Github-256.png"/></a>
+      <a href={deploy} onMouseOut={mouseOutEvent} onMouseOver={mouseOverEvent} target="_blank"><img src={link}/></a>
+      <a href={github} onMouseOut={mouseOutEvent} onMouseOver={mouseOverEvent} target="_blank"><img src="https://cdn0.iconfinder.com/data/icons/shift-logotypes/32/Github-256.png"/></a>
     </div>
       <div id="details">
         <h2 data-aos="fade-up">{projectOn}</h2>
