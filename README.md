@@ -8,7 +8,7 @@
 > https://mohdwaqi.github.io/portfolio/
 
 ## View
-[![Mohd-Waqi-Pervez-Google-Chrome-09-12-2023-18-30-12.png](https://i.postimg.cc/5NYpdw9D/Mohd-Waqi-Pervez-Google-Chrome-09-12-2023-18-30-12.png)](https://postimg.cc/XpW99BCg)
+[![screenshot.png](https://i.postimg.cc/SNdvGRGg/screenshot.png)](https://postimg.cc/Mvc56WNB)
 
 ## Tech Stack Used
 > - HTML
